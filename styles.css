@@ -1,0 +1,75 @@
+
+#year-range-slider {
+ width: 90%;
+ margin-left: 30px;
+ margin-bottom: 8px;
+}
+
+.noUi-background {
+    height: 5px;
+  }
+
+.noUi-connect {
+    background-color: rgb(166, 131, 210); /* $fill-color */
+}
+
+.noUi-handle {
+    background-color: rgb(94, 55, 142); /* $control-color */
+    border: none;
+    box-shadow: none;
+    font-size: 5px;
+    height: 5px;
+    left: 0;
+    margin-left: 10px;
+    margin-top: 0px; /* Calculated from the SCSS expression */
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 5px; /* $control-width */
+    z-index: 2;
+    cursor: ew-resize;
+}
+
+.noUi-handle:hover {
+    background-color: rgb(103, 60, 155); /* result of lighten($control-color, 10%) */
+}
+.noUi-handle.noUi-active {
+    background-color: rgb(85, 50, 128); /* result of darken($control-color, 10%) */
+    z-index: 3;
+}
+
+/* year-range-label*/
+.year-range-slider-label {
+    display: flex; 
+    align-items: left;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+#end-value {
+    margin-left: 200px;
+}
+
+.controls-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.industry-control, .year-control {
+    margin: 10px;
+    margin-bottom: 5px;
+}
+.industry-control {
+    width: 70%;
+    font-size: 15px;
+    margin-top: 0px;
+}
+
+.year-control {
+    width: 30%;
+}
+
+.highlighted {
+    stroke: black;
+    stroke-width: 2px;
+}

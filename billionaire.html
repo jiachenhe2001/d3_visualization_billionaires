@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3 Scatter Plot</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/nouislider/distribute/nouislider.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/nouislider/distribute/nouislider.min.js"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chroma-js@2.1.0/chroma.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.css" />
+    <style type="text/css">
+        .leaflet-container{background-color:#c5e8ff;}
+    </style>
+</head>
+<body>
+    <div class="controls-container">
+    <div class = "year-control">
+        <div type="range" id="year-range-slider"></div>
+        <div class="year-range-slider-label">
+            <div class="year-label" id="start-value"> Year start: 2010 </div> 
+            <div class="year-label" id="end-value"> Year end: 2023 </div>
+        </div>
+        <input type="checkbox" class="self_made_check" id = "both" checked> Both
+        <input type="checkbox" class="self_made_check" value="True"> Self-made
+        <input type="checkbox" class="self_made_check" value="False"> Not Self-made
+    </div>
+    <div class = "industry-control">
+        <input type="checkbox" id="allIndustry" checked> All
+        <div>
+        <input type="checkbox" class="industryCheck" value="Automotive"> Automotive
+        <input type="checkbox" class="industryCheck" value="Billionaire"> Billionaire
+        <input type="checkbox" class="industryCheck" value="Business"> Business
+        <input type="checkbox" class="industryCheck" value="Celebrity"> Celebrity
+        <input type="checkbox" class="industryCheck" value="Construction & Engineering"> Construction & Engineering
+        <input type="checkbox" class="industryCheck" value="Diversified"> Diversified
+        <input type="checkbox" class="industryCheck" value="Energy"> Energy
+        <input type="checkbox" class="industryCheck" value="Fashion & Retail"> Fashion & Retail
+        <input type="checkbox" class="industryCheck" value="Finance & Investments"> Finance & Investments
+        <input type="checkbox" class="industryCheck" value="Food & Beverage"> Food & Beverage
+        <input type="checkbox" class="industryCheck" value="Gambling & Casinos"> Gambling & Casinos
+        <input type="checkbox" class="industryCheck" value="Gaming"> Gaming
+        <input type="checkbox" class="industryCheck" value="Healthcare"> Healthcare
+        <input type="checkbox" class="industryCheck" value="Logistics"> Logistics
+        <input type="checkbox" class="industryCheck" value="Manufacturing"> Manufacturing
+        <input type="checkbox" class="industryCheck" value="Media & Entertainment"> Media & Entertainment
+        <input type="checkbox" class="industryCheck" value="Medicine"> Medicine
+        <br>
+        <input type="checkbox" class="industryCheck" value="Metals & Mining"> Metals & Mining
+        <input type="checkbox" class="industryCheck" value="Oil"> Oil
+        <input type="checkbox" class="industryCheck" value="Politics"> Politics
+        <input type="checkbox" class="industryCheck" value="Real Estate"> Real Estate
+        <input type="checkbox" class="industryCheck" value="Retail"> Retail
+        <input type="checkbox" class="industryCheck" value="Service"> Service
+        <input type="checkbox" class="industryCheck" value="Sports"> Sports
+        <input type="checkbox" class="industryCheck" value="Technology"> Technology
+        <input type="checkbox" class="industryCheck" value="Telecom"> Telecom
+        </div>
+    </div>
+    </div>
+
+    <svg id="vis1" width="700" height="400"></svg>
+    <svg id="vis2" width="780" height="400"></svg>
+    <svg id="vis3" width="700" height="400"></svg>
+    <svg id="vis4" width="700" height="400"></svg>
+    <script src="script.js"></script>
+</body>
+</html>
